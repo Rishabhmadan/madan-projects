@@ -15,7 +15,7 @@ export default function ProductCard({ product, cartQty, onAdd, onRemove }) {
       
       <div className="product-image-container">
         {typeof image === "string" && (image.startsWith("/") || image.startsWith("http")) ? (
-          <img src={image.startsWith("/") ? image.substring(1) : image} alt={name} style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: "var(--radius-sm)" }} />
+          <img src={image.startsWith("/") ? `${import.meta.env.BASE_URL || '/'}${image.substring(1)}` : image} alt={name} style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: "var(--radius-sm)" }} />
         ) : (
           image
         )}

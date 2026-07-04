@@ -18,7 +18,7 @@ export default function Header({
         <div className="header-left">
           <div className="logo-container" onClick={() => setCurrentView("shop")} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "48px", height: "48px", overflow: "hidden", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", border: "1.5px solid var(--border-color)", backgroundColor: "#ffffff", boxShadow: "var(--shadow-sm)" }}>
-              <img src="logo.jpg" alt="MPMM Logo" style={{ width: "100%", height: "100%", transform: "scale(1.45)", objectFit: "cover" }} />
+              <img src={`${import.meta.env.BASE_URL || '/'}logo.jpg`} alt="MPMM Logo" style={{ width: "100%", height: "100%", transform: "scale(1.45)", objectFit: "cover" }} />
             </div>
             <div>
               <div className="logo-main">
