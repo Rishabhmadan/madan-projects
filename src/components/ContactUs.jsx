@@ -110,7 +110,7 @@ export default function ContactUs() {
       {/* Contact Hero banner */}
       <div className="contact-hero">
         <div className="contact-hero-icon" style={{ width: "100px", height: "100px", overflow: "hidden", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", border: "2px solid var(--border-color)", backgroundColor: "#ffffff", marginBottom: "8px", boxShadow: "var(--shadow-md)" }}>
-          <img src="/logo.jpg" alt="MPMM Logo" style={{ width: "100%", height: "100%", transform: "scale(1.45)", objectFit: "cover" }} />
+          <img src="logo.jpg" alt="MPMM Logo" style={{ width: "100%", height: "100%", transform: "scale(1.45)", objectFit: "cover" }} />
         </div>
         <h2>Madan Projects & Model Makers (MPMM)</h2>
         <p>

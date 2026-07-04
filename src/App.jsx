@@ -207,7 +207,7 @@ export default function App() {
                   </div>
                 </div>
                 <div className="promo-image-section" style={{ width: "110px", height: "110px", overflow: "hidden", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", border: "4px solid rgba(255,255,255,0.25)", backgroundColor: "#ffffff", padding: "0", boxShadow: "var(--shadow-md)" }}>
-                  <img src="/logo.jpg" alt="MPMM Logo" style={{ width: "100%", height: "100%", transform: "scale(1.45)", objectFit: "cover" }} />
+                  <img src="logo.jpg" alt="MPMM Logo" style={{ width: "100%", height: "100%", transform: "scale(1.45)", objectFit: "cover" }} />
                 </div>
               </div>
 

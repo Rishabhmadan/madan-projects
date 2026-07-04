@@ -111,7 +111,7 @@ _I will pick up this order in 30 minutes from your Sector 7, Gurugram store. Ple
         <div className="modal-header">
           <h3 className="modal-title" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <div style={{ width: "30px", height: "30px", overflow: "hidden", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid var(--border-color)", backgroundColor: "#ffffff" }}>
-              <img src="/logo.jpg" alt="Logo" style={{ width: "100%", height: "100%", transform: "scale(1.45)", objectFit: "cover" }} />
+              <img src="logo.jpg" alt="Logo" style={{ width: "100%", height: "100%", transform: "scale(1.45)", objectFit: "cover" }} />
             </div>
             Confirm Pickup Order
           </h3>
