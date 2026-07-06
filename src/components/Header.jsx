@@ -14,7 +14,7 @@ export default function Header({
   return (
     <header className="header">
       <div className="header-container">
-        {/* Left: Brand Logo + Digital Prints Redirect link */}
+        {/* Left: Brand Logo */}
         <div className="header-left">
           <div className="logo-container" onClick={() => setCurrentView("shop")} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "48px", height: "48px", overflow: "hidden", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", border: "1.5px solid var(--border-color)", backgroundColor: "#ffffff", boxShadow: "var(--shadow-sm)" }}>
@@ -27,41 +27,18 @@ export default function Header({
               <div className="logo-sub">Model Makers (MPMM)</div>
             </div>
           </div>
-
-          {/* Redirect to Madan Printers Sub-URL */}
-          <a 
-            href="https://printers.madanprojects.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            style={{ 
-              display: "flex", 
-              alignItems: "center", 
-              gap: "8px", 
-              padding: "10px 18px", 
-              backgroundColor: "var(--blinkit-yellow)", 
-              border: "2px solid #e0ab10",
-              borderRadius: "var(--radius-md)", 
-              textDecoration: "none",
-              color: "var(--text-main)",
-              fontWeight: "800",
-              fontSize: "14px",
-              boxShadow: "0 2px 10px rgba(245, 187, 27, 0.3)",
-              transition: "all 0.15s ease",
-              animation: "pulseShadow 2s infinite"
-            }}
-            className="digital-prints-link"
-          >
-            <Printer size={15} />
-            <span>Digital Prints & Binding</span>
-          </a>
-          <style dangerouslySetInnerHTML={{__html: `
-            @keyframes pulseShadow {
-              0% { box-shadow: 0 0 0 0 rgba(245, 187, 27, 0.4); }
-              70% { box-shadow: 0 0 0 8px rgba(245, 187, 27, 0); }
-              100% { box-shadow: 0 0 0 0 rgba(245, 187, 27, 0); }
-            }
-          `}} />
         </div>
+
+        {/* Redirect to Madan Printers Sub-URL */}
+        <a 
+          href="https://printers.madanprojects.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="digital-prints-link"
+        >
+          <Printer size={15} />
+          <span>Digital Prints & Binding</span>
+        </a>
 
         {/* Center: Search Bar */}
         <div className="header-center">

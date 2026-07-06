@@ -106,6 +106,37 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 24px;
   flex-shrink: 0;
+  order: 1;
+}
+
+.digital-prints-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background-color: var(--blinkit-yellow);
+  border: 2px solid #e0ab10;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 800;
+  font-size: 14px;
+  box-shadow: 0 2px 10px rgba(245, 187, 27, 0.3);
+  transition: all 0.15s ease;
+  animation: pulseShadow 2s infinite;
+  order: 2;
+  flex-shrink: 0;
+}
+
+.digital-prints-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 187, 27, 0.4);
+}
+
+@keyframes pulseShadow {
+  0% { box-shadow: 0 0 0 0 rgba(245, 187, 27, 0.4); }
+  70% { box-shadow: 0 0 0 8px rgba(245, 187, 27, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(245, 187, 27, 0); }
 }
 
 .logo-container {
@@ -1153,31 +1184,143 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+  /* Header Mobile Grid Layout */
   .header {
-    padding: 10px 16px;
+    padding: 10px 14px;
   }
   
   .header-container {
-    gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
+    gap: 10px 12px;
+  }
+  
+  .header-left {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    order: 1;
+    gap: 8px;
+  }
+  
+  .logo-container {
+    gap: 8px !important;
+  }
+  
+  .logo-container > div:first-child {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  
+  .logo-main {
+    font-size: 16px !important;
+    letter-spacing: -0.5px;
+  }
+  
+  .logo-main span {
+    font-size: 15px !important;
+    padding: 0px 4px !important;
+    margin-left: 2px !important;
+  }
+  
+  .logo-sub {
+    font-size: 8px !important;
+    letter-spacing: 0.5px !important;
+    margin-top: 0px !important;
+  }
+  
+  .digital-prints-link {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    order: 4;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    font-size: 13px;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+  }
+  
+  .header-center {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    order: 3;
+    width: 100%;
+    max-width: none;
+  }
+  
+  .search-container {
+    height: 38px;
+    padding: 0 12px;
+    border-radius: 8px;
+  }
+  
+  .search-icon {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .search-input {
+    font-size: 13px;
+  }
+  
+  .header-right {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    order: 2;
+    gap: 8px;
   }
   
   .location-picker {
     display: none;
   }
   
+  .contact-nav-btn {
+    padding: 6px 8px;
+    height: 36px;
+    border-radius: 8px;
+  }
+  
   .contact-nav-btn span {
     display: none;
   }
   
+  .cart-button {
+    padding: 6px 8px;
+    height: 36px;
+    border-radius: 8px;
+  }
+  
+  .cart-icon-container svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .cart-divider {
+    margin: 0 6px;
+    height: 16px;
+  }
+  
+  .cart-value-qty {
+    font-size: 11px;
+  }
+  
+  .cart-value-price {
+    font-size: 11px;
+  }
+
+  /* App Layout & Sidebar */
   .app-layout {
     flex-direction: column;
-    height: calc(100vh - 69px);
+    height: calc(100vh - 145px); /* Adjusted for taller mobile header */
   }
   
   .sidebar {
     display: none;
   }
   
+  /* Mobile category pills */
   .mobile-categories-bar {
     display: flex;
     overflow-x: auto;
@@ -1218,6 +1361,37 @@ h1, h2, h3, h4, h5, h6 {
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+  }
+
+  /* Promo Banner Mobile Adjustments */
+  .promo-banner {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 16px;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .promo-content {
+    max-width: 100%;
+  }
+  
+  .promo-content > div {
+    justify-content: center;
+  }
+  
+  .promo-title {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  
+  .promo-desc {
+    font-size: 12px;
+  }
+  
+  .promo-image-section {
+    width: 70px;
+    height: 70px;
   }
 }
 
